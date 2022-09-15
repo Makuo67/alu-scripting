@@ -1,6 +1,2 @@
 #!/usr/bin/env ruby
-print ARGV[0].scan(/(?<=[f]rom:).?\d{10,15}(.(?=\]))/).join
-print ","
-print ARGV[1].scan(/(?<=[t]o:).{5,15}(.(?=\]))/).join
-print ","
-print ARGV[2].scan(/(?<=[f]lags:).{5,15}(.(?=\]))/).join
+puts ARGV[0].scan(/(?<=from:|to:|flags:).+?(?=\])/).join(‘,’)
