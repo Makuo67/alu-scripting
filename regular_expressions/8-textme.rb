@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-sender = ARGV[0].scan(/(?<=[f]rom:).+(.(?=\]))/).join
-receiver = ARGV[0].scan(/(?<=[t]o:).+(.(?=\]))/).join
-flags = ARGV[0].scan(/(?<=[f]lags:).+(.(?=\]))/).join
-puts (sender + "," + receiver + "," + flags) 
+print ARGV[0].scan(/(?<=[f]rom:).+(.(?=\]))/).join
+print ","
+print ARGV[0].scan(/(?<=[t]o:).+(.(?=\]))/).join
+print ","
+print ARGV[0].scan(/(?<=[f]lags:).+(.(?=\]))/).join
